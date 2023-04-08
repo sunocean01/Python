@@ -1,0 +1,5 @@
+2022-08-12 07:45:28,522-INFO-test1.py-info
+2022-08-12 07:45:28,522-WARNING-test1.py-warning
+2022-08-12 07:45:28,522-ERROR-test1.py-error
+NoneType: None
+2022-08-12 07:45:28,522-CRITICAL-test1.py-critical

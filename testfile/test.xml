@@ -1,0 +1,78 @@
+<?xml version="1.0"?> 
+<bookstore school="AutoAcademy"> 
+    This is the bookstore value...
+    <history id="shelf001" type="Recent" hash="1cdf045c"> 
+        text,source 
+        <book name="xxxx10" country="Russia">
+            this is first history 1-1....price:40RMB
+            <price>40</price>
+        </book>
+        <book name="xxxx20" country="China">
+            this is first history 1-2...price:30RMB
+            <illustration author="Mr Dao"></illustration>
+            <price>30</price>
+        </book>
+        <book region="China">
+            this is first history 1-3,price:9.8RMB
+            <price>9.8</price>
+        </book>
+        <documentation country="China"></documentation>
+        <magzine date="2020-12" country="China">
+            Brief description:......xxxx10
+            <price>12</price>
+        </magzine>
+        <tag location="head">cue word head</tag>
+        <tag>cue word middle</tag>
+        <tag location="tail">cue word tail</tag>
+    </history> 
+    <political id="shelf002" name="release01" hash="f200013e"> 
+        <book name="subrelease01" country="China"> 
+            <aiqing local="XiangGang"></aiqing>
+            <kongbu local="America"></kongbu>
+            <zhanzheng local="MainLand"></zhanzheng>
+            <price>100</price>
+            xml,sgml
+            
+        </book>
+        <book name="subrelease02" id = "U" country="America"> 
+            <yunxiao local="XiangGang" price="200">
+            </yunxiao>
+            <yiyun local="America" price="30">
+            </yiyun>
+            <shidai local="MainLand" price="150">
+            </shidai>
+            xml2,sgml2 
+            <price>10</price>
+        </book> 
+        <book name="subrelease03" country="China">
+            <price>5</price>
+        </book>
+        <book name="subrelease03" country="Japan">
+            <price>200</price>
+        </book>
+        <magzine name="Global">
+            <price>78</price>
+        </magzine>
+    </political> 
+    <nature id="shelf002" name="invalid" hash="f200013f">
+        <book name="World" price="50">
+            test warning
+        </book>
+    </nature>
+    <science id="Shelf003" name="Bug">
+        <book name="Global" price="100"></book>
+    </science>
+    <history id="shelf005" type="Antique">
+        Second history value
+        <book name="NAN" country="America">
+            This is second history 2-1,price:15RMB
+            <price>15</price>
+        </book>
+        <book name="South" country="Korea">
+            This is second history 2-2,price:60RMB
+            <price>60</price>
+        </book>
+    </history>
+</bookstore> 
+
+

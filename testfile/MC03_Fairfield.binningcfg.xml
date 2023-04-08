@@ -1,0 +1,1995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BinningConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    Version="2.0"
+    Product="Fairfield"
+    xsi:noNamespaceSchemaLocation="C:\svn_test\FairfieldCalibration_5.0.0.0\Xsd\MC03.binningcfg.xsd"
+    MaterialNumber="Fairfield"
+    TestStage="MC03">
+    <InputBinCodesToTest>
+        <BinCode>0x01</BinCode>
+        <BinCode>0x02</BinCode>
+        <BinCode>0x03</BinCode>
+        <BinCode>0x04</BinCode>
+        <BinCode>0x05</BinCode>
+        <BinCode>0x06</BinCode>
+        <BinCode>0x07</BinCode>
+        <BinCode>0x08</BinCode>
+        <BinCode>0x09</BinCode>
+        <BinCode>0x0A</BinCode>
+        <BinCode>0x0B</BinCode>
+        <BinCode>0x0C</BinCode>
+        <BinCode>0x0D</BinCode>
+        <BinCode>0x0E</BinCode>
+        <BinCode>0x0F</BinCode>
+    </InputBinCodesToTest>
+    <SpecialBins>
+        <SystemErrorBin
+            BinCode="0x00" />
+        <DefaultBin
+            BinCode="0x01" />
+        <IncompleteBin
+            BinCode="0x70" />
+        <NoTestBin
+            BinCode="0x71" />
+        <ErrorBin
+            BinCode="0x72" />
+        <NotBinnedBin
+            BinCode="0x79" />
+        <InvalidResultBin
+            BinCode="0x7A" />
+        <SkippedBin
+            BinCode="0x7B" />
+        <NoDeviceBin
+            BinCode="0xFF" />
+    </SpecialBins>
+    <TestGroupSequenceList>
+        <MC03>
+            <PmPeriphery
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T150011
+                    TestName="AtmHeatingDeviceCurrent"
+                    Unit="mA"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="130"
+                    UTL="140"
+                    Comment="133 if both heaters are working" />
+            </PmPeriphery>
+            <FairfieldDiodeMeasurement
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T031001
+                    TestName="VoltageIn"
+                    Unit="V"
+                    LBin="0x30"
+                    UBin="0x31"
+                    LTL="0.3"
+                    UTL="1.0"
+                    Comment="test to check shorts/opens only" />
+                <T031002
+                    TestName="VoltageSclTx"
+                    Unit="V"
+                    LBin="0x30"
+                    UBin="0x31"
+                    LTL="0.1"
+                    UTL="1.0"
+                    Comment="test to check shorts/opens only" />
+                <T031003
+                    TestName="VoltageSdaRx"
+                    Unit="V"
+                    LBin="0x30"
+                    UBin="0x31"
+                    LTL="0.1"
+                    UTL="1.0"
+                    Comment="test to check shorts/opens only" />
+                <T031004
+                    TestName="VoltageIfSelect"
+                    Unit="V"
+                    LBin="0x30"
+                    UBin="0x31"
+                    LTL="0.1"
+                    UTL="1.0"
+                    Comment="test to check shorts/opens only" />
+                <T031005
+                    TestName="VoltageBoot"
+                    Unit="V"
+                    LBin="0x30"
+                    UBin="0x31"
+                    LTL="0.1"
+                    UTL="1.0"
+                    Comment="test to check shorts/opens only" />
+                <T031006
+                    TestName="VoltageShieldTest"
+                    Unit="V"
+                    LBin="0x30"
+                    UBin="0x70"
+                    LTL="0.00001"
+                    UTL="1.3"
+                    Comment="just check if shield is on ground" />
+            </FairfieldDiodeMeasurement>
+            <ReadFirmwareVersion
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T011003
+                    TestName="DutFirmwareMajorVersion"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1"
+                    UTL="1"
+                    Comment="" />
+                <T011004
+                    TestName="DutFirmwareMinorVersion"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="12"
+                    UTL="12"
+                    Comment="" />
+            </ReadFirmwareVersion>
+            <ResetOnPmCalibrationEntry
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T055001
+                    TestName="DeleteSuccessful"
+                    Unit="PassFail"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1"
+                    UTL="1"
+                    Comment="Do not change" />
+            </ResetOnPmCalibrationEntry>
+            <DeleteConfigurationAndCalibration
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T056001
+                    TestName="DeleteCalibrationSuccessful"
+                    Unit="PassFail"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1"
+                    UTL="1"
+					Comment="Do not change" />
+            </DeleteConfigurationAndCalibration>
+            <WriteProductionDate
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T010002
+                    TestName="ProductionDateIsPass"
+                    Unit="PassFail"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1"
+                    UTL="1"
+                    Comment="Do not change" />
+                <T010003
+                    TestName="ProductionDateIsWritten"
+                    Unit="Bool"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1"
+                    UTL="1"
+                    Comment="Do not change" />
+            </WriteProductionDate>
+            <LogNumberOfDuts
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T000001
+                    TestName="NumberOfDuts"
+                    Unit="Int32"
+                    LBin="0x7F"
+                    UBin="0x72"
+                    LTL="55"
+                    UTL="none"
+                    Comment="to less sensors affects arizona performance" />
+            </LogNumberOfDuts>
+            <ReadDeviceId
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T004002
+                    TestName="DeviceIdInternal"
+                    Unit="SerialNumber"
+                    LBin="0x7F"
+                    UBin="0x7F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Internal usage only - no limits" />
+            </ReadDeviceId>
+            <Ct_SetSerial
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T15
+                    TestName="SetSerialSuccess"
+                    Unit="PassFail"
+                    LBin="0x7F"
+                    UBin="0x7F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Internal usage only - no limits" />
+            </Ct_SetSerial>
+            <ReadBin
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T001001
+                    TestName="ReadLmCalibBin"
+                    Unit="Int32"
+                    LBin="0x77"
+                    UBin="0x77"
+                    LTL="1"
+                    UTL="1"
+                    Comment="1: LM Calib Pass" />
+                <T001002
+                    TestName="ReadPmCalibBin"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="127"
+                    UTL="127"
+                    Comment="127 default value after reset" />
+                <T001003
+                    TestName="ReadAllBinsGoodQualityIndicator"
+                    Unit="Bool"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="0"
+                    UTL="0"
+                    Comment="0 default value after reset" />
+            </ReadBin>
+            <SetAutoCleaningInterval_Reset
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T601001
+                    TestName="AutoCleaningInterval"
+                    Unit="Int32"
+                    LBin="0x38"
+                    UBin="0x38"
+                    LTL="0"
+                    UTL="0"
+                    Comment="Do not change" />
+            </SetAutoCleaningInterval_Reset>
+            <SetBaseConfig
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T060001
+                    TestName="SetTargetFanSpeed"
+                    Unit="rpm"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="5000"
+                    UTL="5000"
+                    Comment="Hard coded parameter - Do not change" />
+                <T060002
+                    TestName="SetUpdateInterval"
+                    Unit="ms"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1000"
+                    UTL="1000"
+                    Comment="Hard coded parameter - Do not change" />
+                <T060003
+                    TestName="SetPeakThreshold"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="28"
+                    UTL="28"
+                    Comment="Hard coded parameter - Do not change" />
+                <T060004
+                    TestName="SetPeakClippingLimit"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="4096"
+                    UTL="4096"
+                    Comment="Hard coded parameter - Do not change" />
+                <T060005
+                    TestName="SetLaserSetPoint"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="75"
+                    UTL="160"
+                    Comment="Tracking - Fall back limits only" />
+                <T060006
+                    TestName="SetNoiseSuppression"
+                    Unit="Int32"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="5"
+                    UTL="5"
+                    Comment="Hard coded parameter - Do not change" />
+            </SetBaseConfig>
+            <PhotoDiodeMeasurement
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T050001
+                    TestName="PhotoTicksLaserOff"
+                    Unit="Ticks16"
+                    LBin="0xE2"
+                    UBin="0xE2"
+                    LTL="1750"
+                    UTL="1950"
+                    Comment="plausibility limits" />
+                <T050002
+                    TestName="PhotoTicksLaserOn"
+                    Unit="Ticks16"
+                    LBin="0xE2"
+                    UBin="0xE2"
+                    LTL="1790"
+                    UTL="1990"
+                    Comment="plausibility limits" />
+                <T050003
+                    TestName="PhotoTicksDiff"
+                    Unit="Int32"
+                    LBin="0xE2"
+                    UBin="0xE2"
+                    LTL="0"
+                    UTL="60"
+                    Comment="initial limit proposal" />
+            </PhotoDiodeMeasurement>
+            <Aerosol_1
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x79">
+                <T006001
+                    TestName="ZeroInterceptPM2p5NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="1665"
+                    UTL="3000"
+                    Comment="original limits 1600, 2450" />
+                <T006002
+                    TestName="ZeroInterceptPM2p5MeanPartMassRef"
+                    Unit="pg"
+                    LBin="0xF1"
+                    UBin="0xF1"
+                    LTL="0.34"
+                    UTL="0.6"
+                    Comment="Initial limit proposal old value 0.42" />
+                <T006005
+                    TestName="ZeroInterceptPM10p0NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="1767"
+                    UTL="3000"
+                    Comment="original limits 1700, 2500" />
+                <T006006
+                    TestName="ZeroInterceptPM10p0MeanPartMassRef"
+                    Unit="pg"
+                    LBin="0xF1"
+                    UBin="0xF1"
+                    LTL="1.0"
+                    UTL="1.815"
+                    Comment="initial limit proposal old value 1.2" />
+                <T006007
+                    TestName="Pm0p5NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006008
+                    TestName="Pm1p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006009
+                    TestName="Pm2p5NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006010
+                    TestName="Pm4p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006011
+                    TestName="Pm10p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006012
+                    TestName="Pm1p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006013
+                    TestName="Pm2p5MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006014
+                    TestName="Pm4p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006015
+                    TestName="Pm10p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006016
+                    TestName="Pm0p5NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006017
+                    TestName="Pm1p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006018
+                    TestName="Pm2p5NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006019
+                    TestName="Pm4p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006020
+                    TestName="Pm10p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006021
+                    TestName="Pm1p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006022
+                    TestName="Pm2p5MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006023
+                    TestName="Pm4p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006024
+                    TestName="Pm10p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006025
+                    TestName="T1RefMean"
+                    Unit="DegC"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="22"
+                    UTL="28"
+                    Comment="" />
+                <T006026
+                    TestName="Rh1RefMean"
+                    Unit="percent"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="30"
+                    UTL="52"
+                    Comment="" />
+                <T006027
+                    TestName="T2RefMean"
+                    Unit="DegC"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="22"
+                    UTL="28"
+                    Comment="" />
+                <T006028
+                    TestName="RH2RefMean"
+                    Unit="percent"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="30"
+                    UTL="52"
+                    Comment="" />
+                <T006029
+                    TestName="TAtmRefMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006030
+                    TestName="RhAtmRefMean"
+                    Unit="percent"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006031
+                    TestName="TSagRefMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006032
+                    TestName="RhSagRefMean"
+                    Unit="percent"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006033
+                    TestName="AmbientPressureRefMean"
+                    Unit="Pa"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="tacking - no limits" />
+                <T006034
+                    TestName="AirFlowRefMean"
+                    Unit="l_per_min"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="0.99"
+                    UTL="1.01"
+                    Comment="integrity limit" />
+                <T006035
+                    TestName="TTsiMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="tacking - no limits" />
+                <T006036
+                    TestName="DecayRatePM2p5NumbConcRef"
+                    Unit="percent"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="0.02"
+                    UTL="0.13"
+                    Comment="initial limit proposal for ionizer" />
+                <T006038
+                    TestName="NoisePM2p5NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="0.1"
+                    UTL="200.0"
+                    Comment="noisy data will be handles by python exe" />
+                <T006042
+                    TestName="PreCleaningTime"
+                    Unit="s"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="tacking - no limits" />
+                <T006043
+                    TestName="PostCleanPm10P0NumbConcMean"
+                    Unit="1_per_cm3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="tacking - no limits" />
+                <T006044
+                    TestName="PostCleanPm10P0MassConcMean"
+                    Unit="ug_per_m3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="tacking - no limits" />
+            </Aerosol_1>
+            <CalibrationPreCheck_1
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T086001
+                    TestName="FanSpeedMedian"
+                    Unit="rpm"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="4950"
+                    UTL="5050"
+                    Comment="copied from G1" />
+                <T086002
+                    TestName="FanVoltageMedian"
+                    Unit="V"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="2.7"
+                    UTL="3.4"
+                    Comment="Initial limit proposal" />
+                <T086003
+                    TestName="FanSpeedStd"
+                    Unit="rpm"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="0.01"
+                    UTL="30"
+                    Comment="Initial limit proposal" />
+                <T086004
+                    TestName="FanVoltageStd"
+                    Unit="V"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="0."
+                    UTL="0.03"
+                    Comment="Initial limit proposal" />
+                <T086005
+                    TestName="PmNormRate"
+                    Unit="cm3_per_s"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="none"
+                    UTL="0.35"
+                    Comment="No ltl use utl GainArzNc_2p5 instead" />
+                <T086006
+                    TestName="TotalCounts"
+                    Unit="Int32"
+                    LBin="0x52"
+                    UBin="0x5F"
+                    LTL="167"
+                    UTL="1000"
+                    Comment="ltl defined by statistics 10000 counts per measurement" />
+            </CalibrationPreCheck_1>
+            <Aerosol_2
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x79">
+                <T006001
+                    TestName="ZeroInterceptPM2p5NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="1883"
+                    UTL="2500"
+                    Comment="original limits 1700, 2300" />
+                <T006002
+                    TestName="ZeroInterceptPM2p5MeanPartMassRef"
+                    Unit="pg"
+                    LBin="0xF2"
+                    UBin="0xF2"
+                    LTL="0.040012"
+                    UTL="0.067843"
+                    Comment="original limits 75, 150" />
+                <T006005
+                    TestName="ZeroInterceptPM10p0NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="1883"
+                    UTL="2500"
+                    Comment="original limits 1700, 2300" />
+                <T006006
+                    TestName="ZeroInterceptPM10p0MeanPartMassRef"
+                    Unit="pg"
+                    LBin="0xF2"
+                    UBin="0xF2"
+                    LTL="0.055"
+                    UTL="0.15"
+                    Comment="Initial limit proposal" />
+                <T006007
+                    TestName="Pm0p5NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006008
+                    TestName="Pm1p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006009
+                    TestName="Pm2p5NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006010
+                    TestName="Pm4p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006011
+                    TestName="Pm10p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006012
+                    TestName="Pm1p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006013
+                    TestName="Pm2p5MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006014
+                    TestName="Pm4p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006015
+                    TestName="Pm10p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006016
+                    TestName="Pm0p5NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006017
+                    TestName="Pm1p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006018
+                    TestName="Pm2p5NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006019
+                    TestName="Pm4p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006020
+                    TestName="Pm10p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006021
+                    TestName="Pm1p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006022
+                    TestName="Pm2p5MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006023
+                    TestName="Pm4p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006024
+                    TestName="Pm10p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006025
+                    TestName="T1RefMean"
+                    Unit="DegC"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="22"
+                    UTL="28"
+                    Comment="" />
+                <T006026
+                    TestName="Rh1RefMean"
+                    Unit="percent"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="30"
+                    UTL="52"
+                    Comment="" />
+                <T006027
+                    TestName="T2RefMean"
+                    Unit="DegC"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="22"
+                    UTL="28"
+                    Comment="" />
+                <T006028
+                    TestName="RH2RefMean"
+                    Unit="percent"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="30"
+                    UTL="52"
+                    Comment="" />
+                <T006029
+                    TestName="TAtmRefMean"
+                    Unit="DegC"
+                    LBin="0x7F"
+                    UBin="0x7F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006030
+                    TestName="RhAtmRefMean"
+                    Unit="percent"
+                    LBin="0x7F"
+                    UBin="0x7F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006031
+                    TestName="TSagRefMean"
+                    Unit="DegC"
+                    LBin="0x7F"
+                    UBin="0x7F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006032
+                    TestName="RhSagRefMean"
+                    Unit="percent"
+                    LBin="0x7F"
+                    UBin="0x7F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006033
+                    TestName="AmbientPressureRefMean"
+                    Unit="Pa"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limits" />
+                <T006034
+                    TestName="AirFlowRefMean"
+                    Unit="l_per_min"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="0.99"
+                    UTL="1.01"
+                    Comment="Integrity Limit" />
+                <T006035
+                    TestName="TTsiMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limits" />
+                <T006036
+                    TestName="DecayRatePM2p5NumbConcRef"
+                    Unit="percent"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="0.01"
+                    UTL="0.10"
+                    Comment="copied from G1" />
+                <T006038
+                    TestName="NoisePM2p5NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="0.1"
+                    UTL="200.0"
+                    Comment="noisy data will be handles by python exe" />
+                <T006042
+                    TestName="PreCleaningTime"
+                    Unit="s"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limits" />
+                <T006043
+                    TestName="PostCleanPm10P0NumbConcMean"
+                    Unit="1_per_cm3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limits" />
+                <T006044
+                    TestName="PostCleanPm10P0MassConcMean"
+                    Unit="ug_per_m3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limits" />
+            </Aerosol_2>
+            <CalibrationPreCheck_2
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T086001
+                    TestName="FanSpeedMedian"
+                    Unit="rpm"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="4950"
+                    UTL="5050"
+                    Comment="Initial limit proposal" />
+                <T086002
+                    TestName="FanVoltageMedian"
+                    Unit="V"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="2.7"
+                    UTL="3.4"
+                    Comment="Initial limit proposal" />
+                <T086003
+                    TestName="FanSpeedStd"
+                    Unit="rpm"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="0.01"
+                    UTL="30"
+                    Comment="Initial limit proposal" />
+                <T086004
+                    TestName="FanVoltageStd"
+                    Unit="V"
+                    LBin="0x6F"
+                    UBin="0x6F"
+                    LTL="0.0"
+                    UTL="0.03"
+                    Comment="Initial limit proposal" />
+                <T086005
+                    TestName="PmNormRate"
+                    Unit="cm3_per_s"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="none"
+                    UTL="0.32"
+                    Comment="Initial limit proposal,change same as G2A" />
+                <T086006
+                    TestName="TotalCounts"
+                    Unit="Int32"
+                    LBin="0x52"
+                    UBin="0x5F"
+                    LTL="167"
+                    UTL="1000"
+                    Comment="ltl defined by statistics 10000 counts per measurement" />
+            </CalibrationPreCheck_2>
+            <CalculateCalibration
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T008001
+                    TestName="CalculationSuccessful"
+                    Unit="PassFail"
+                    LBin="0x00"
+                    UBin="0x00"
+                    LTL="1"
+                    UTL="1"
+                    Comment="Do not change" />
+                <T008002
+                    TestName="WarningCode"
+                    Unit="Int32"
+                    LBin="0xE0"
+                    UBin="0xE0"
+                    LTL="0"
+                    UTL="0"
+                    Comment="Do not change" />
+                <T008003
+                    TestName="ErrorCode"
+                    Unit="Int32"
+                    LBin="0xE1"
+                    UBin="0xE1"
+                    LTL="0"
+                    UTL="0"
+                    Comment="do not change" />
+                <T008004
+                    TestName="KclHyp_0"
+                    Unit="Ticks16Float"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="0.76"
+                    UTL="0.90"
+                    Comment="Initial limit proposal" />
+                <T008005
+                    TestName="KclHyp_1"
+                    Unit="Ticks16Float"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Initial limit proposal,follow G2A" />
+                <T008006
+                    TestName="KclHyp_2"
+                    Unit="Ticks16Float"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Initial limit proposal,follow G2A" />
+                <T008007
+                    TestName="KclHyp_3"
+                    Unit="Ticks16Float"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Initial limit proposal,follow G2A" />
+                <T008008
+                    TestName="KclHyp_4"
+                    Unit="Ticks16Float"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Initial limit proposal,follow G2A" />
+                <T008009
+                    TestName="KclHyp_5"
+                    Unit="Ticks16Float"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="copied from G1 Mono,follow G2A" />
+                <T008010
+                    TestName="ArzHyp_0"
+                    Unit="Ticks16Float"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="0.47"
+                    UTL="0.67"
+                    Comment="Initial limit proposal,follow G2A" />
+                <T008011
+                    TestName="ArzHyp_1"
+                    Unit="Ticks16Float"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="initial limit proposal for G2,follow G2A" />
+                <T008012
+                    TestName="ArzHyp_2"
+                    Unit="Ticks16Float"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="initial limit proposal for G2,follow G2A" />
+                <T008013
+                    TestName="ArzHyp_3"
+                    Unit="Ticks16Float"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="initial limit proposal for G2,follow G2A" />
+                <T008014
+                    TestName="ArzHyp_4"
+                    Unit="Ticks16Float"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="initial limit proposal for G2,follow G2A" />
+                <T008015
+                    TestName="ArzHyp_5"
+                    Unit="Ticks16Float"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Initial limit proposal,follow G2A" />
+                <T008016
+                    TestName="Omega"
+                    Unit="Ticks16Float"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="0.765"
+                    UTL="0.89"
+                    Comment="Limit review required in September 2020,follow G2A" />
+                <T008017
+                    TestName="GainKclMc_0p5"
+                    Unit="ug_per_m3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008018
+                    TestName="GainKclMc_1p0"
+                    Unit="ug_per_m3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008019
+                    TestName="GainKclMc_2p5"
+                    Unit="ug_per_m3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008020
+                    TestName="GainKclMc_4p0"
+                    Unit="ug_per_m3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008021
+                    TestName="GainKclMc_10p0"
+                    Unit="ug_per_m3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008022
+                    TestName="GainKclNc_0p5"
+                    Unit="1_per_cm3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="copied from G1,follow G2A,follow G2A" />
+                <T008023
+                    TestName="GainKclNc_1p0"
+                    Unit="1_per_cm3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008024
+                    TestName="GainKclNc_2p5"
+                    Unit="1_per_cm3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="8.5"
+                    Comment="Review required in September 2020,follow G2A" />
+                <T008025
+                    TestName="GainKclNc_4p0"
+                    Unit="1_per_cm3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008026
+                    TestName="GainKclNc_10p0"
+                    Unit="1_per_cm3"
+                    LBin="0xE4"
+                    UBin="0xE4"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008027
+                    TestName="GainArzMc_0p5"
+                    Unit="ug_per_m3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008028
+                    TestName="GainArzMc_1p0"
+                    Unit="ug_per_m3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008029
+                    TestName="GainArzMc_2p5"
+                    Unit="ug_per_m3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008030
+                    TestName="GainArzMc_4p0"
+                    Unit="ug_per_m3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008031
+                    TestName="GainArzMc_10p0"
+                    Unit="ug_per_m3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008032
+                    TestName="GainArzNc_0p5"
+                    Unit="1_per_cm3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008033
+                    TestName="GainArzNc_1p0"
+                    Unit="1_per_cm3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008034
+                    TestName="GainArzNc_2p5"
+                    Unit="1_per_cm3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="7.0"
+                    Comment="No ltl use utl Normrate_Arz instead" />
+                <T008035
+                    TestName="GainArzNc_4p0"
+                    Unit="1_per_cm3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+                <T008036
+                    TestName="GainArzNc_10p0"
+                    Unit="1_per_cm3"
+                    LBin="0xE3"
+                    UBin="0xE3"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking no limits" />
+            </CalculateCalibration>
+            <WriteCalibration
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T009001
+                    TestName="WriteCalibrationSuccessful"
+                    Unit="PassFail"
+                    LBin="0x41"
+                    UBin="0x41"
+                    LTL="1"
+                    UTL="1"
+                    Comment="do not change" />
+            </WriteCalibration>
+            <Aerosol_Remeasurement
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x79">
+                <T006001
+                    TestName="ZeroInterceptPM2p5NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="1109"
+                    UTL="2131"
+                    Comment="original limits 1000, 2000"/>
+                <T006002
+                    TestName="ZeroInterceptPM2p5MeanPartMassRef"
+                    Unit="pg"
+                    LBin="0xF2"
+                    UBin="0xF2"
+                    LTL="0.023606"
+                    UTL="0.095751"
+                    Comment="orginal limits 20, 150" />
+                <T006005
+                    TestName="ZeroInterceptPM10p0NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="1109"
+                    UTL="2335"
+                    Comment="orginal limits 1000, 2200" />
+                <T006006
+                    TestName="ZeroInterceptPM10p0MeanPartMassRef"
+                    Unit="pg"
+                    LBin="0xF2"
+                    UBin="0xF2"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limits" />
+                <T006007
+                    TestName="Pm0p5NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006008
+                    TestName="Pm1p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006009
+                    TestName="Pm2p5NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006010
+                    TestName="Pm4p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006011
+                    TestName="Pm10p0NumbConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006012
+                    TestName="Pm1p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006013
+                    TestName="Pm2p5MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006014
+                    TestName="Pm4p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006015
+                    TestName="Pm10p0MassConcSPS1Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006016
+                    TestName="Pm0p5NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006017
+                    TestName="Pm1p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006018
+                    TestName="Pm2p5NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006019
+                    TestName="Pm4p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006020
+                    TestName="Pm10p0NumbConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006021
+                    TestName="Pm1p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006022
+                    TestName="Pm2p5MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006023
+                    TestName="Pm4p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006024
+                    TestName="Pm10p0MassConcSPS2Ratio"
+                    Unit="Ratio"
+                    LBin="0xFB"
+                    UBin="0xFB"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006025
+                    TestName="T1RefMean"
+                    Unit="DegC"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="22"
+                    UTL="28"
+                    Comment="" />
+                <T006026
+                    TestName="Rh1RefMean"
+                    Unit="percent"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="30"
+                    UTL="52"
+                    Comment="" />
+                <T006027
+                    TestName="T2RefMean"
+                    Unit="DegC"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="22"
+                    UTL="28"
+                    Comment="" />
+                <T006028
+                    TestName="RH2RefMean"
+                    Unit="percent"
+                    LBin="0xFC"
+                    UBin="0xFC"
+                    LTL="30"
+                    UTL="52"
+                    Comment="" />
+                <T006029
+                    TestName="TAtmRefMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006030
+                    TestName="RhAtmRefMean"
+                    Unit="percent"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006031
+                    TestName="TSagRefMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006032
+                    TestName="RhSagRefMean"
+                    Unit="percent"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006033
+                    TestName="AmbientPressureRefMean"
+                    Unit="Pa"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+                <T006034
+                    TestName="AirFlowRefMean"
+                    Unit="l_per_min"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="0.99"
+                    UTL="1.01"
+                    Comment="Integrity limit" />
+                <T006035
+                    TestName="TTsiMean"
+                    Unit="DegC"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limit" />
+                <T006036
+                    TestName="DecayRatePM2p5NumbConcRef"
+                    Unit="percent"
+                    LBin="0x75"
+                    UBin="0x75"
+                    LTL="0.01"
+                    UTL="0.10"
+                    Comment="initial limit proposal" />
+                <T006038
+                    TestName="NoisePM2p5NumbConcRef"
+                    Unit="1_per_cm3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="0.1"
+                    UTL="200.0"
+                    Comment="noisy data will be handles by python exe" />
+                <T006042
+                    TestName="PreCleaningTime"
+                    Unit="s"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limit" />
+                <T006043
+                    TestName="PostCleanPm10P0NumbConcMean"
+                    Unit="1_per_cm3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limit" />
+                <T006044
+                    TestName="PostCleanPm10P0MassConcMean"
+                    Unit="ug_per_m3"
+                    LBin="0xFA"
+                    UBin="0xFA"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limit" />
+            </Aerosol_Remeasurement>
+            <CalculatePerformance_Remeasurement
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T085001
+                    TestName="Pm2p5NumbConcDutAccuracy"
+                    Unit="percent"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="-0.11"
+                    UTL="0.03"
+                    Comment="range should be .14" />
+                <T085002
+                    TestName="Pm2p5MassConcDutAccuracy"
+                    Unit="percent"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="-0.11"
+                    UTL="0.03"
+                    Comment="range should be .14" />
+                <T085003
+                    TestName="Pm2p5NumbConcDutNoise"
+                    Unit="percent"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="0.00001"
+                    UTL="0.017"
+                    Comment="copied from G1" />
+                <T085004
+                    TestName="Pm2p5MassConcDutNoise"
+                    Unit="percent"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="0.00001"
+                    UTL="0.017"
+                    Comment="copied from G1" />
+                <T085005
+                    TestName="Pm2p5NumbConcDutMean"
+                    Unit="1_per_cm3"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="Tracking - No limit" />
+                <T085006
+                    TestName="Pm2p5MassConcDutMean"
+                    Unit="ug_per_m3"
+                    LBin="0x5F"
+                    UBin="0x5F"
+                    LTL="none"
+                    UTL="none"
+                    Comment="added by BinningCfgPatcher" />
+            </CalculatePerformance_Remeasurement>
+            <SetAutoCleaningInterval_Final
+                HwNonCriticalBin="0x7A"
+                SwNonCriticalBin="0x7A"
+                NullValueBin="0x7A">
+                <T601001
+                    TestName="AutoCleaningInterval"
+                    Unit="Int32"
+                    LBin="0x38"
+                    UBin="0x38"
+                    LTL="604800"
+                    UTL="604800"
+                    Comment="Do not change" />
+            </SetAutoCleaningInterval_Final>
+        </MC03>
+    </TestGroupSequenceList>
+    <SoftBins>
+        <Bin
+            BinCode="0x00"
+            BinQuality="SystemError"
+            BinDescription="SystemError"
+            HardBinCode="15" />
+        <Bin
+            BinCode="0x01"
+            BinQuality="Pass"
+            BinDescription="Pass1"
+            HardBinCode="0" />
+        <Bin
+            BinCode="0x30"
+            BinQuality="Fail"
+            BinDescription="Short"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x31"
+            BinQuality="Fail"
+            BinDescription="Contact"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0x38"
+            BinQuality="Fail"
+            BinDescription="Bias"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x41"
+            BinQuality="Fail"
+            BinDescription="NonVolatile"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x5F"
+            BinQuality="Fail"
+            BinDescription="PMSensor"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0x6F"
+            BinQuality="Fail"
+            BinDescription="Blower"
+            HardBinCode="5" />
+        <Bin
+            BinCode="0x70"
+            BinQuality="Fail"
+            BinDescription="Incomplete"
+            HardBinCode="10" />
+        <Bin
+            BinCode="0x71"
+            BinQuality="NoTest"
+            BinDescription="NoTest"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x72"
+            BinQuality="Error"
+            BinDescription="Error"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0x75"
+            BinQuality="Fail"
+            BinDescription="Reference/SetPoint"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0x77"
+            BinQuality="Fail"
+            BinDescription="Tracking"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x79"
+            BinQuality="NotBinned"
+            BinDescription="NotBinned"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x7A"
+            BinQuality="InvalidResult"
+            BinDescription="InvalidResult"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x7B"
+            BinQuality="Skipped"
+            BinDescription="Skipped"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0x7F"
+            BinQuality="Fail"
+            BinDescription="LowYield"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xE0"
+            BinQuality="Fail"
+            BinDescription="CalibWarning"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xE1"
+            BinQuality="Fail"
+            BinDescription="CalibError"
+            HardBinCode="14" />
+        <Bin
+            BinCode="0xE2"
+            BinQuality="Fail"
+            BinDescription="PhotoDiode"
+            HardBinCode="14" />
+		<Bin
+            BinCode="0xE3"
+            BinQuality="Fail"
+            BinDescription="CalibParams_ARZ"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xE4"
+            BinQuality="Fail"
+            BinDescription="CalibParams_KCL"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xF1"
+            BinQuality="Fail"
+            BinDescription="SpectraQuality_ARZ"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xF2"
+            BinQuality="Fail"
+            BinDescription="SpectraQuality_KCL"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xFA"
+            BinQuality="Fail"
+            BinDescription="ChamberMalfunction"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xFB"
+            BinQuality="Fail"
+            BinDescription="PMPlausibilisation"
+            HardBinCode="4" />
+        <Bin
+            BinCode="0xFC"
+            BinQuality="Fail"
+            BinDescription="EnvironmentalConditions"
+            HardBinCode="4" />
+		<Bin
+            BinCode="0x52"
+            BinQuality="Fail"
+            BinDescription="LowTotalCounts"
+            HardBinCode="6" />        <Bin
+            BinCode="0xFF"
+            BinQuality="NoDevice"
+            BinDescription="NoDevice"
+            HardBinCode="14" />
+    </SoftBins>
+    <HardBins>
+        <HardBin
+            HardBinCode="0"
+            BinQuality="Pass"
+            BinDescription="Pass"
+            SortOrder="0"
+            ColorString="#66CC33" />
+        <HardBin
+            HardBinCode="1"
+            BinQuality="Fail"
+            BinDescription="Fail"
+            SortOrder="0"
+            ColorString="#00B0F0" />
+        <HardBin
+            HardBinCode="2"
+            BinQuality="Sample"
+            BinDescription="2: Sample"
+            SortOrder="0"
+            ColorString="#006666" />
+        <HardBin
+            HardBinCode="3"
+            BinQuality="Fail"
+            BinDescription="3: Fail LM Calib"
+            SortOrder="0"
+            ColorString="#FFA500" />
+        <HardBin
+            HardBinCode="4"
+            BinQuality="Fail"
+            BinDescription="4: Fail PM Calib"
+            SortOrder="0"
+            ColorString="#8B4513" />
+        <HardBin
+            HardBinCode="5"
+            BinQuality="Fail"
+            BinDescription="5:Blower"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="6"
+            BinQuality="Fail"
+            BinDescription="6:LowTotalCounts"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="7"
+            BinQuality="Fail"
+            BinDescription="Fail"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="8"
+            BinQuality="Fail"
+            BinDescription="8: Fail Laser"
+            SortOrder="0"
+            ColorString="#F59D9B" />
+        <HardBin
+            HardBinCode="9"
+            BinQuality="Fail"
+            BinDescription="9: Fail Blower"
+            SortOrder="0"
+            ColorString="#F9AF1F" />
+        <HardBin
+            HardBinCode="10"
+            BinQuality="Fail"
+            BinDescription="10: Fail Shield"
+            SortOrder="0"
+            ColorString="#E5407F" />
+        <HardBin
+            HardBinCode="11"
+            BinQuality="Fail"
+            BinDescription="Fail"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="12"
+            BinQuality="Fail"
+            BinDescription="Fail"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="13"
+            BinQuality="Fail"
+            BinDescription="Fail"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="14"
+            BinQuality="Fail"
+            BinDescription="14: Fail Purge"
+            SortOrder="0"
+            ColorString="#FF0000" />
+        <HardBin
+            HardBinCode="15"
+            BinQuality="Error"
+            BinDescription="15: Error"
+            SortOrder="0"
+            ColorString="#7030A0" />
+    </HardBins>
+</BinningConfig>
