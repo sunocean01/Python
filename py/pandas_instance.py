@@ -724,7 +724,9 @@ float_precision:    str, optional
 '''
 # data = data.iloc[0:5]
 # data = data.assign(Deviation=lambda x:x.close-x.open,Note2='DDD')  #这里的lambda传入的是DataFrame的每一行；
-'''# data = data.assign(Group=lambda x:"AAA" if x.close>x.open else "BBB")  #这里lambda不可以条件赋值, 原因?'''
+'''# data = data.assign(Group=lambda x:"AAA" if x.close>x.open else "BBB")  #这里lambda不可以条件赋值, 原因?
+原因: x 是每一列的数据, x.close>x.open 是serial,
+'''
 
 # --------------------------------------------------------------------------
 # def Note(x):
